@@ -1,0 +1,45 @@
+services:
+  db:
+      build:
+        context: ./db
+        dockerfile: dockerfile
+      ports:
+        - "5432:5432"
+      environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+      restart: always
+      networks:
+        - cloud_icon_master
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - cloud_icon_master
+    env_file:
+      - ./frontend/.env
+  backend:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - cloud_icon_master
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+    command: >
+      bash -c "while !</dev/tcp/db/5432; do echo 'Waiting for database to start'; sleep 1; done;
+      echo 'Database is now available'; GO_ENV=dev go run ./migrate/migrate.go && ./main"
+
+  
+networks:
+  cloud_icon_master:
+    driver: bridge

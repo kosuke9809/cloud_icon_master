@@ -1,0 +1,20 @@
+# 一般的な不要なファイルやディレクトリ
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log
+**/.DS_Store
+**/.env
+
+# ビルド時に生成される一時ファイル
+**/*.tmp
+**/*.log
+
+# ソースコード管理関連
+**/.git
+**/.gitignore
+
+# IDEやエディタ関連の設定ファイル
+**/.idea
+**/.vscode
+**/*.sublime-project
+**/*.sublime-workspace
