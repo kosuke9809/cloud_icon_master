@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/kosuke9809/aws_icons_quiz_backend/usecase"
+	"github.com/kosuke9809/cloud_icon_master/internal/usecase"
 	"github.com/labstack/echo/v4"
 )
 

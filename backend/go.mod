@@ -1,4 +1,4 @@
-module github.com/kosuke9809/aws_icons_quiz_backend
+module github.com/kosuke9809/cloud_icon_master
 
 go 1.20
 

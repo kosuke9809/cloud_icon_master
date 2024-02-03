@@ -37,7 +37,7 @@ services:
       - db
     command: >
       bash -c "while !</dev/tcp/db/5432; do echo 'Waiting for database to start'; sleep 1; done;
-      echo 'Database is now available'; GO_ENV=dev go run ./migrate/migrate.go && ./main"
+      echo 'Database is now available'; GO_ENV=dev ./main"
 
   
 networks:

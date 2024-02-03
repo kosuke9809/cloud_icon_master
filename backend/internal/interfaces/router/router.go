@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kosuke9809/aws_icons_quiz_backend/controller"
+	"github.com/kosuke9809/cloud_icon_master/internal/interfaces/controller"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )

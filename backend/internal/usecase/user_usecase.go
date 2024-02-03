@@ -5,8 +5,9 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/kosuke9809/aws_icons_quiz_backend/model"
-	"github.com/kosuke9809/aws_icons_quiz_backend/repository"
+	"github.com/kosuke9809/cloud_icon_master/internal/domain/model"
+	"github.com/kosuke9809/cloud_icon_master/internal/domain/repository"
+
 	"golang.org/x/crypto/bcrypt"
 )
 
