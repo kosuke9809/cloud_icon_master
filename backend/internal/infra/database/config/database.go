@@ -15,7 +15,7 @@ func NewDB() *gorm.DB {
 	if os.Getenv("GO_ENV") == "dev" {
 		err := godotenv.Load()
 		if err != nil {
-			log.Fatalln(err)
+			log.Println(err)
 		}
 	}
 
@@ -24,9 +24,8 @@ func NewDB() *gorm.DB {
 
 	db, err := gorm.Open(postgres.Open(url), &gorm.Config{})
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
-	fmt.Println("Connected")
 	return db
 
 }
@@ -34,6 +33,6 @@ func NewDB() *gorm.DB {
 func CloseDB(db *gorm.DB) {
 	sqlDB, _ := db.DB()
 	if err := sqlDB.Close(); err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 }

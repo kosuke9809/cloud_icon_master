@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/kosuke9809/aws_icons_quiz_backend/model"
+	"github.com/kosuke9809/cloud_icon_master/internal/domain/model"
 	"golang.org/x/oauth2"
 	"gorm.io/gorm"
 )

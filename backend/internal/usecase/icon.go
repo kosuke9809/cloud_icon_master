@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/kosuke9809/aws_icons_quiz_backend/model"
-	"github.com/kosuke9809/aws_icons_quiz_backend/repository"
+	"github.com/kosuke9809/cloud_icon_master/internal/domain/model"
+	"github.com/kosuke9809/cloud_icon_master/internal/domain/repository"
 )
 
 type IIconUsecase interface {

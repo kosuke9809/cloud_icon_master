@@ -10,10 +10,6 @@ COPY . .
 
 ENV GO_ENV dev
 
-# RUN go build -o migrate ./migrate/migrate.go
-# RUN go run ./migrate/migrate.go
 RUN go build -o main .
 
 EXPOSE 8080
-
-# CMD ["./main"]
